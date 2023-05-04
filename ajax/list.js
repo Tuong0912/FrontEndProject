@@ -32,7 +32,7 @@ function showALl() {
 
 function saveId(id){
     localStorage.setItem("idTest", id);
-    window.location.href = "../job_detail.html";
+    window.location.href = "http://localhost:63342/Big%20Project/job_detail.html?_ijt=dc98tjpp4ek32p1t90v70kgtb&_ij_reload=RELOAD_ON_SAVE";
 }
 
 showALl()

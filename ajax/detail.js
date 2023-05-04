@@ -25,7 +25,7 @@ function view() {
 
                         <div class="vertical-space-20"></div>
                         <h4>Experience & Requirement</h4>
-                        <p class="margin-bottom">Experience required : ${data.}</p>
+                        <p class="margin-bottom">Experience required : ${data.experience}</p>
                         <div class="float-right margin-top ">
                                 <p class="date-time"> Exprite Date : ${data.expriteDate}</p>
                         </div>
