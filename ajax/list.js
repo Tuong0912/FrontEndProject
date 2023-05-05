@@ -1,11 +1,12 @@
-function showALl() {
+function    showALl() {
     $.ajax({
         type: "GET", url: "http://localhost:8080/job", success(data) {
             console.log(data);
             let context = ''
             for (let i = 0; i < data.length; i++) {
-                context += `<div class="detail width-100"><div class="media display-inline text-align-center" xmlns="http://www.w3.org/1999/html">
-                            <img src="${data[i].src}" alt="John Doe"  width="90px"  height="90px" class="mr-3 ">
+                context += `<div class="detail width-100">
+                            <div class="media display-inline text-align-center" xmlns="http://www.w3.org/1999/html">
+                            <img src="${data[i].src}" alt="John Doe"  width="90px"  height="90px" class="mr-3 "style="margin-top: 50px">
                             <div class="media-body text-left  text-align-center">
                             <h6><a href="#" class="font-color-black">${data[i].content}</a></h6>
                             <i class="large material-icons">account_balance</i>
@@ -17,6 +18,8 @@ function showALl() {
                             <i class="large material-icons">place</i>
                             <span class="text font-size">${data[i].city.name}</span>
                             <div class="float-right margin-top text-align-center">
+                            <button onclick="deleteById(${data[i].id})" class="part-full-time">Update</button></br>
+                            <button onclick="deleteById(${data[i].id})" class="part-full-time">Delete</button></br>
                             <button onclick="saveId(${data[i].id})" class="part-full-time" >View</button><br>
                             <p class="date-time">Post Day : ${data[i].postDate}</p>
                             </div>
@@ -33,6 +36,17 @@ function showALl() {
 function saveId(id){
     localStorage.setItem("idTest", id);
     window.location.href = "http://localhost:63342/Big%20Project/job_detail.html?_ijt=dc98tjpp4ek32p1t90v70kgtb&_ij_reload=RELOAD_ON_SAVE";
+}
+
+
+function deleteById(id) {
+    $.ajax({
+        type: "DELETE",
+        url: "http://localhost:8080/job/" + id,
+        success() {
+            showALl()
+        }
+    })
 }
 
 showALl()

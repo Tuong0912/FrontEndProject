@@ -17,17 +17,17 @@ function view() {
                         <i class="material-icons">place</i>
                         <span class="text">${data.city.name}</span>
                         <h4>Short description</h4>
-                        <p>${data.description.shortDescription}</p>
+                        <p>${data.shortDescription}</p>
                         </div>
-                        <img src="${data.src}" width="10px"  height="400px"  alt="John Doe" class="job-detail-img">
+                        <img src="${data.src}" width="0,1px"  height="400px"  alt="John Doe" class="job-detail-img">
                         <div class="Job-Description">
                         <h4>Job Description / Responsibility</h4>
-
+                        <p>${data.longDescription}</p>
                         <div class="vertical-space-20"></div>
                         <h4>Experience & Requirement</h4>
                         <p class="margin-bottom">Experience required : ${data.experience}</p>
                         <div class="float-right margin-top ">
-                                <p class="date-time"> Exprite Date : ${data.expriteDate}</p>
+                                <p class="date-time"> Ex</p>
                         </div>
                         </div>
                         </div>
