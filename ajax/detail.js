@@ -27,7 +27,7 @@ function view() {
                         <h4>Experience & Requirement</h4>
                         <p class="margin-bottom">Experience required : ${data.experience}</p>
                         <div class="float-right margin-top ">
-                                <p class="date-time"> Ex</p>
+                                <p class="date-time"></p>
                         </div>
                         </div>
                         </div>
@@ -38,6 +38,19 @@ function view() {
         }
     })
     // event.preventDefault()
+}
+
+function checkApplication(id) {
+    $.ajax({
+        type: "PATCH",
+        url: "http://localhost:8080/job/" + id,
+        success() {
+            alert("Dang ky thanh cong")
+        },
+        error:function () {
+            alert("Fail")
+        }
+    })
 }
 
 view();
