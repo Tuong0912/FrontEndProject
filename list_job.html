@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body >
 
 <header class="header">
 
@@ -223,23 +223,22 @@
                 </div>
                 <div class="Salary-Range-box">
                     <p class="title">Salary Range</p>
-                    <p>
+
+                    <p >
                         <input type="text" id="amount1" class="salery-range"> <i class="fa fa-minus minus"></i>
-                        <input type="text" id="amount2" class="salery-range">
-                    </p>
+                        <input type="text" id="amount2" class="salery-range"></p>
                     <div id="slider-range"></div>
+
                     <p class="small-title">Experience Level</p>
                     <form action="#" class="search-box_search_form">
-                        <select class="dropdown_item_select search-box_search_input">
-                            <option>Select experience level</option>
-                            <option>Select experience level1</option>
-                            <option>Select experience level2</option>
-                        </select>
+                        <input class=" search-box_search_input" id="qualification" oninput="searchByQualification()">
+
                         <p class="small-title">Location</p>
                         <input class="search-box_search_input Location " placeholder="Location" required="required"
                                type="search">
                         <span class="fa fa-map-marker location-icone"></span>
                     </form>
+
                 </div>
                 <div class="Industry-box">
                     <p class="title">Industry</p>
@@ -365,3 +364,4 @@
 
 </html>
 <script src="ajax/list.js"></script>
+<script src="ajax/search.js"></script>
