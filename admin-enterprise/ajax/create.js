@@ -68,12 +68,8 @@ function createForm() {
         </div>
         <div class="col-lg-6 col-md-6">
             <div class="form-group">
-                <label for="company">Min Salary</label>
-                <input type="text" class="form-control" id="minSalary" placeholder="min salary" required onkeypress="return isNumberKey(event)"/>
-            </div></br>
-            <div class="form-group">
-                <label for="company">Max Salary</label>
-                <input type="text" class="form-control" id="maxSalary" placeholder="max salary" required onkeypress="return isNumberKey(event)" />
+                <label for="company">Salary</label>
+                <input type="text" class="form-control" id="salary" placeholder="salary" required onkeypress="return isNumberKey(event)"/>
             </div>
         </div>
     </div>
@@ -158,8 +154,8 @@ function save() {
     let longDescription = $('#longDescription').val()
     let programLanguage = document.getElementById("programLanguage").value
     let qualification = document.getElementById("qualification").value
-    let minSalary = $('#minSalary').val()
-    let maxSalary = $('#maxSalary').val()
+    let salary = $('#salary').val()
+
     let newJob = {
         content: content,
         enterprise: {
@@ -177,8 +173,7 @@ function save() {
         qualification: {
             "id": qualification
         },
-        minSalary: minSalary,
-        maxSalary: maxSalary
+        salary: salary
     };
     console.log(newJob)
     $.ajax({
@@ -190,7 +185,7 @@ function save() {
         data: JSON.stringify(newJob),
         url: "http://localhost:8080/job",
         success() {
-            window.location.href = "list_job.html"
+            window.location.href = "list_job_approved.html"
         }
     })
     event.preventDefault()

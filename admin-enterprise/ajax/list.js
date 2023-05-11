@@ -1,16 +1,15 @@
 function showAll() {
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/job/findAll",
+        url: "http://localhost:8080/job/findAllTrue",
         success(data) {
-            console.log(data);
             let context = '';
             for (let i = 0; i < data.content.length; i++) {
                 context += `<div class="detail width-100">
                                 <div class="media display-inline text-align-center">
-                                    <img src="${data.content[i].src}" alt="John Doe" width="90px" height="90px" class="mr-3" style="margin-top: 50px">
+                                    <img src="${data.content[i].src}" alt="John Doe" width="90px" height="90px" class="mr-3" style="margin-top: 10px">
                                     <div class="media-body text-left text-align-center">
-                                        <h6><a href="#" class="font-color-black">${data.content[i].content}</a></h6>
+                                        <h6><a href="#" class="font-color-black" style="margin-top: 12px">${data.content[i].content}</a></h6>
                                         <i class="large material-icons">account_balance</i>
                                         <span class="text">${data.content[i].enterprise.name}</span>
                                         <br>
@@ -50,7 +49,7 @@ function showAll() {
 function findAll(page) {
     $.ajax({
         type: "GET",
-        url: `http://localhost:8080/job/findAll?page=${page}`,
+        url: `http://localhost:8080/job/findAllTrue?page=${page}`,
         success(data) {
             let context = '';
             for (let i = 0; i < data.content.length; i++) {
@@ -70,7 +69,7 @@ function findAll(page) {
                                         <div class="float-right margin-top text-align-center">
                                             <button onclick="updateById(${data.content[i].id})" class="part-full-time">Update</button></br>
                                             <button onclick="deleteById(${data.content[i].id})" class="part-full-time">Delete</button></br>
-                                            <button onclick="viewDetail(${data.content[i].id})" class="part-full-time">View</button><br>
+                                            <button onclick="saveId(${data.content[i].id})" class="part-full-time">View</button><br>
                                             <p class="date-time">Post Day : ${data.content[i].postDate}</p>
                                         </div>
                                     </div>
@@ -100,9 +99,8 @@ function nextPage() {
     let currentPage = parseInt(document.querySelector('.pagination .active').innerText) - 1;
     $.ajax({
         type: "GET",
-        url: `http://localhost:8080/job/findAll?page=${currentPage + 1}`,
+        url: `http://localhost:8080/job/findAllTrue?page=${currentPage + 1}`,
         success(data) {
-            console.log(data);
             let context = '';
             for (let i = 0; i < data.content.length; i++) {
                 context += `<div class="detail width-100">
@@ -121,7 +119,7 @@ function nextPage() {
                                         <div class="float-right margin-top text-align-center">
                                             <button onclick="updateById(${data.content[i].id})" class="part-full-time">Update</button></br>
                                             <button onclick="deleteById(${data.content[i].id})" class="part-full-time">Delete</button></br>
-                                            <button onclick="viewDetail(${data.content[i].id})" class="part-full-time">View</button><br>
+                                            <button onclick="saveId(${data.content[i].id})" class="part-full-time">View</button><br>
                                             <p class="date-time">Post Day : ${data.content[i].postDate}</p>
                                         </div>
                                     </div>
@@ -151,7 +149,7 @@ function deleteById(id) {
         type: "DELETE",
         url: "http://localhost:8080/job/" + id,
         success() {
-            showALl()
+            showAll()
         }
     })
 }

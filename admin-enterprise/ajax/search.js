@@ -63,5 +63,28 @@ function searchByQualificationAndCityAndSalary() {
     event.preventDefault()
 }
 
+function recommendedNews() {
+    $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/job/selectRandom",
+        success(data) {
+            console.log(data)
+            let context = ``
+            context += `<h5  class="text-left">Recommended Jobs</h5>`
+            for (let i = 0; i < data.length; i++) {
+                context += `<div onclick="saveId(${data[i].id})">
+                                <div class="media display-inline text-align-center" >
+                                    <img src="${data[i].src}" alt="John Doe" width="45px" height="45px" class="mr-3" style="margin-top: 30px">
+                                    <div class="media-body text-left text-align-center" style="margin-top: 32px">
+                                        <h10 class="text font-size">${data[i].content}</h10>
+                                    </div>
+                                </div>
+                            </div>`
+            }
+            document.getElementById("random").innerHTML = context
+        }
+    })
+}
 
 
+recommendedNews();
