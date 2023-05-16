@@ -3,6 +3,7 @@ function register() {
     let email = $('#email').val()
     let password = $('#password').val()
     let rewritePassword = $('#rewritePassword').val()
+    let role = document.getElementById("role").value
     if (email === "" || password === "" || rewritePassword === "") {
         alert("Fill all the the form before register")
         event.preventDefault()
@@ -22,7 +23,10 @@ function register() {
         let user = {
             fullname: fullname,
             email: email,
-            password: password
+            password: password,
+            role: {
+                "id": role
+            }
         }
         $.ajax({
             type: "POST",
@@ -67,3 +71,19 @@ function logout() {
     window.location.href = "login.html";
 }
 
+function role() {
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:8080/role",
+        success(data) {
+            let context = ``
+            for (let i = 0; i < data.length; i++) {
+                context += `<option id="signuprole" value="${data[i].id}">${data[i].name}</option>`
+            }
+            context += ``
+            document.getElementById("role").innerHTML = context;
+        }
+    })
+}
+
+role()

@@ -167,7 +167,7 @@ function save() {
         src: src,
         shortDescription: shortDescription,
         longDescription: longDescription,
-        programLanguage: {
+        programLanguag: {
             "id": programLanguage
         },
         qualification: {
