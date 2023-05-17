@@ -2,11 +2,9 @@ function showAll() {
     let user;
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/user/" + localStorage.getItem("idUser"),
+        // url: "http://localhost:8080/user/" + localStorage.getItem("idUser"),
+        url: "http://localhost:8080/job/findAllTrue",
         success(arr) {
-            user = arr;
-            console.log(user)
-
             $.ajax({
                 type: "GET",
                 url: "http://localhost:8080/job/findAllTrue",
