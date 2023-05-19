@@ -60,17 +60,26 @@ function login() {
         success(data) {
             userLogin = data.user1234567890;
             console.log(userLogin)
-            localStorage.setItem("idUser", userLogin)
+            localStorage.setItem("idUser", userLogin.id)
             console.log(localStorage.getItem("idUser"))
             let user = localStorage.getItem(userLogin)
-            if (userLogin.role.id === 3) {
-                window.location.href = "http://localhost:63343/Big%20Project/user/html/list_user_job.html?_ijt=33t9vct44cqfnep5dj7mqniqo0&_ij_reload=RELOAD_ON_SAVE"
-            } else if (userLogin.role.id === 2) {
-                window.location.href = "http://localhost:63343/Big%20Project/enterprise/html/list_enterprise_job.html?_ijt=kf0le0mbanhnfqjs961akejobg&_ij_reload=RELOAD_ON_SAVE";
-            } else {
-                window.location.href = "http://localhost:63343/Big%20Project/admin/html/list_job_unapproved.html?_ijt=jspj86pp3sokt7e3r31q4tod42&_ij_reload=RELOAD_ON_SAVE"
+            if (userLogin === null) {
+                alert('Wrong account or password')
 
+            } else if (userLogin.aBoolean === false) {
+                alert('Your account has not been approved')
+
+            } else {
+                alert("Welcome " + userLogin.fullname)
+                if (userLogin.role.id === 3) {
+                    window.location.href = "http://localhost:63343/Big%20Project/user/html/list_user_job.html?_ijt=33t9vct44cqfnep5dj7mqniqo0&_ij_reload=RELOAD_ON_SAVE"
+                } else if (userLogin.role.id === 2) {
+                    window.location.href = "http://localhost:63343/Big%20Project/enterprise/html/list_enterprise_job.html?_ijt=kf0le0mbanhnfqjs961akejobg&_ij_reload=RELOAD_ON_SAVE";
+                } else {
+                    window.location.href = "http://localhost:63343/Big%20Project/admin/html/list_job_unapproved.html?_ijt=jspj86pp3sokt7e3r31q4tod42&_ij_reload=RELOAD_ON_SAVE"
+                }
             }
+
         }
     });
 }

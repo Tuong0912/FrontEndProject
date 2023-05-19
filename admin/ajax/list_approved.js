@@ -10,7 +10,7 @@ function showAll() {
                                 <div class="media display-inline text-align-center">
                                     <img src="${data.content[i].src}" alt="John Doe" width="90px" height="90px" class="mr-3" style="margin-top: 50px">
                                     <div class="media-body text-left text-align-center">
-                                        <h6><a href="#" class="font-color-black">${data.content[i].content}</a></h6>
+                                        <h6><a class="font-color-black">${data.content[i].content}</a></h6>
                                         <i class="large material-icons">account_balance</i>
                                         <span class="text">${data.content[i].enterprise.name}</span>
                                         <br>
@@ -58,7 +58,7 @@ function findAll(page) {
                                 <div class="media display-inline text-align-center">
                                     <img src="${data.content[i].src}" alt="John Doe" width="90px" height="90px" class="mr-3" style="margin-top: 50px">
                                     <div class="media-body text-left text-align-center">
-                                        <h6><a href="#" class="font-color-black">${data.content[i].content}</a></h6>
+                                        <h6><a class="font-color-black">${data.content[i].content}</a></h6>
                                         <i class="large material-icons">account_balance</i>
                                         <span class="text">${data.content[i].enterprise.name}</span>
                                         <br>

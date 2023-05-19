@@ -185,7 +185,8 @@ function save() {
         data: JSON.stringify(newJob),
         url: "http://localhost:8080/job",
         success() {
-            window.location.href = "list_job_approved.html"
+            window.location.href = "http://localhost:63343/Big%20Project/enterprise/html/list_enterprise_job.html?_ijt=4dit7qimpmnk7n5s7i71roqsmf&_ij_reload=RELOAD_ON_SAVE"
+            alert("Posted successfully, now you need to wait for admin to approve the post")
         }
     })
     event.preventDefault()

@@ -37,20 +37,9 @@
                 <div class="row">
                     <div class="col">
                         <div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
-                            <ul class="top_bar_contact_list">
-                                <li>
-                                    <i class="fa fa-phone coll" aria-hidden="true"></i>
-                                    <div class="contact-no">0123 4567 8912</div>
-                                </li>
-                                <li>
-                                    <i class="fa fa-envelope coll" aria-hidden="true"></i>
-                                    <div class="email"><a
-                                            href="https://demo.technosarjan.com/cdn-cgi/l/email-protection"
-                                            class="__cf_email__"
-                                            data-cfemail="3f5a475e524f535a7f55505d4b5a515b115c5052">[email&#160;protected]</a>
-                                    </div>
-                                </li>
-                            </ul>
+
+                            <div id="userInformation"></div>
+
                             <div class=" ml-auto ">
                                 <div class="search_button search"><i
                                         class="large material-icons search-icone">search</i></div>
@@ -93,7 +82,7 @@
 
                                     </ul>
                                 </li>
-                                <li><a href="blog_page.html"> Blog</a></li>
+                                <li><a href="list_user_registered.html"> List of registered accounts </a></li>
                                 <li><a href="about_us.html">About</a></li>
                                 <li><a href="gotsomebughere.html">Contact</a></li>
                             </ul>
@@ -221,16 +210,18 @@
                 </div>
                 <div class="Salary-Range-box">
                     <p class="title">Salary Range</p>
-                    <p  oninput="searchByQualificationAndCityAndSalary()">
+                    <p oninput="searchByQualificationAndCityAndSalary()">
                         <input type="text" id="minSalary" class="salery-range"> -
                         <input type="text" id="maxSalary" class="salery-range"></p>
 
                     <p class="small-title">Experience Level</p>
                     <form action="#" class="search-box_search_form">
-                        <input class=" search-box_search_input" id="qualification"  oninput="searchByQualificationAndCityAndSalary()">
+                        <input class=" search-box_search_input" id="qualification"
+                               oninput="searchByQualificationAndCityAndSalary()">
 
                         <p class="small-title">Location</p>
-                        <input class="search-box_search_input Location " id="city" placeholder="Location"  oninput="searchByQualificationAndCityAndSalary()"
+                        <input class="search-box_search_input Location " id="city" placeholder="Location"
+                               oninput="searchByQualificationAndCityAndSalary()"
                                required="required"
                                type="search">
                         <span class="fa fa-map-marker location-icone"></span>
@@ -249,7 +240,6 @@
             <div class="col-lg-8 col-md-12">
 
                 <div id="display"></div>
-
 
 
             </div>
@@ -348,3 +338,4 @@
 </html>
 <script src="../ajax/list_unapproved.js"></script>
 <script src="../ajax/search.js"></script>
+<script src="../ajax/userInformation.js"></script>
