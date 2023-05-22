@@ -62,7 +62,6 @@ function login() {
             console.log(userLogin)
             localStorage.setItem("idUser", userLogin.id)
             console.log(localStorage.getItem("idUser"))
-            let user = localStorage.getItem(userLogin)
             if (userLogin === null) {
                 alert('Wrong account or password')
 

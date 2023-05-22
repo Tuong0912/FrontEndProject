@@ -37,20 +37,7 @@
         <div class="row">
           <div class="col">
             <div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
-              <ul class="top_bar_contact_list">
-                <li>
-                  <i class="fa fa-phone coll" aria-hidden="true"></i>
-                  <div class="contact-no">0123 4567 8912</div>
-                </li>
-                <li>
-                  <i class="fa fa-envelope coll" aria-hidden="true"></i>
-                  <div class="email"><a
-                          href="https://demo.technosarjan.com/cdn-cgi/l/email-protection"
-                          class="__cf_email__"
-                          data-cfemail="3f5a475e524f535a7f55505d4b5a515b115c5052">[email&#160;protected]</a>
-                  </div>
-                </li>
-              </ul>
+              <div id="userInformation"></div>
               <div class=" ml-auto ">
                 <div class="search_button search"><i
                         class="large material-icons search-icone">search</i></div>
@@ -193,7 +180,7 @@
 <section id="resent-job-post" class="background-color-white-drak">
   <div class="vertical-space-85"></div>
   <div class="container text-center">
-    <h4 class="text-left">List Job Unapproved</h4>
+    <h4 class="text-left">List Enterprise Unapproved</h4>
     <div class="vertical-space-30"></div>
     <div class="row">
       <div class="col-lg-4 col-md-12">
@@ -247,7 +234,7 @@
         </div>
       </div>
       <div class="col-lg-8 col-md-12">
-        <div id="user_display"></div>
+        <div id="enterprise_display"></div>
 
       </div>
     </div>
@@ -344,3 +331,5 @@
 
 </html>
 <script src="../ajax/search.js"></script>
+<script src="../ajax/list_enterprise_register.js"></script>
+<script src="../ajax/userInformation.js"></script>
