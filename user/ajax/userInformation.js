@@ -11,10 +11,10 @@ function userInformation(id) {
     </li>
     <li>
         <i class="fa fa-envelope coll" aria-hidden="true"></i>
-        <div class="email"><a
-            href="https://demo.technosarjan.com/cdn-cgi/l/email-protection"
+        <div class="email">
+        <a href="userDetail.html"
             class="__cf_email__"
-            data-cfemail="3f5a475e524f535a7f55505d4b5a515b115c5052">${data.email}</a>
+            data-cfemail="3f5a475e524f535a7f55505d4b5a515b115c5052" style="color: black">${data.email}</a>
         </div>
     </li>
 </ul>`

@@ -84,7 +84,6 @@ function updateUser(id) {
         success(data) {
             console.log(data)
             alert("update success")
-            window.location.href = "http://localhost:63342/Big%20Project/user/html/list_user_job.html?_ijt=69g032288cpjmv61cmeg9u571a&_ij_reload=RELOAD_ON_SAVE"
         }
     });
     event.preventDefault()

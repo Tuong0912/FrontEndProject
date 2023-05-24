@@ -61,9 +61,21 @@ function login() {
             userLogin = data.user1234567890;
             console.log(userLogin)
             localStorage.setItem("idUser", userLogin.id)
-            localStorage.setItem("user_id", userLogin.email);
-            console.log("user_id" + localStorage.getItem("user_id"))
+            localStorage.setItem("user_fullname", userLogin.fullname)
+            localStorage.setItem("user_password", userLogin.password)
+            localStorage.setItem("user_email", userLogin.email);
+            localStorage.setItem("user_phone", userLogin.phone)
+            localStorage.setItem("user_address", userLogin.address)
+            localStorage.setItem("user_role_id", userLogin.role.id)
+            localStorage.setItem("user_role_name", userLogin.role.name)
+            console.log("user_email" + localStorage.getItem("user_email"))
+            console.log("user_fullname" + localStorage.getItem("user_fullname"))
+            console.log("user_password" + localStorage.getItem("user_password"))
             console.log("idUser" + localStorage.getItem("idUser"))
+            console.log("user_phone" + localStorage.getItem("user_phone"))
+            console.log("user_address" + localStorage.getItem("user_address"))
+            console.log("role_id" + localStorage.getItem("user_role_id"))
+            console.log("role_name" + localStorage.getItem("user_role_name"))
 
             if (userLogin === null) {
                 alert('Wrong account or password')
@@ -76,9 +88,9 @@ function login() {
                 if (userLogin.role.id === 3) {
                     window.location.href = "http://localhost:63342/Big%20Project/user/html/list_user_job.html?_ijt=augqfas95gl6govq2d2p26lc61&_ij_reload=RELOAD_ON_SAVE"
                 } else if (userLogin.role.id === 2) {
-                    window.location.href = "http://localhost:63343/Big%20Project/enterprise/html/list_enterprise_job.html?_ijt=kf0le0mbanhnfqjs961akejobg&_ij_reload=RELOAD_ON_SAVE";
+                    window.location.href = "http://localhost:63342/Big%20Project/enterprise/html/list_enterprise_job.html?_ijt=goq8ljlcnkt761a1j3k6l270s5&_ij_reload=RELOAD_ON_SAVE";
                 } else {
-                    window.location.href = "http://localhost:63343/Big%20Project/admin/html/list_job_unapproved.html?_ijt=jspj86pp3sokt7e3r31q4tod42&_ij_reload=RELOAD_ON_SAVE"
+                    window.location.href = "http://localhost:63342/Big%20Project/admin/html/list_job_approved.html?_ijt=goq8ljlcnkt761a1j3k6l270s5&_ij_reload=RELOAD_ON_SAVE"
                 }
             }
 
