@@ -25,10 +25,10 @@ function view() {
                         <p>${data.longDescription}</p>
                         <div class="vertical-space-20"></div>
                         <h4>Experience & Requirement</h4>
-                        <p class="margin-bottom">Experience required : ${data.experience}</p>
-                        <div class="float-right margin-top ">
-                                <p class="date-time"></p>
-                        </div>
+                        <p class="margin-bottom">Experience required : ${data.qualification.name}</p>
+                        <h4>Salary</h4>
+                        <p class="margin-bottom">Basic salary : ${data.salary}$ and will increase in the future</p>
+                        
                         </div>
                         </div>
                        

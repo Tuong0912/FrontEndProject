@@ -28,7 +28,7 @@ function showAll() {
                                         <span class="text font-size">${data.content[i].city.name}</span>
                                         
                                         <div class="float-right margin-top text-align-center">
-                                            <button class="part-full-time" onclick="">Apply Now</button></br>
+                                            <button class="part-full-time" data-job-id="${data.content[i].id}"  onclick="applyJobs()">Apply Now</button></br>
                                             <button onclick="saveId(${data.content[i].id})" class="part-full-time">View</button><br>
                                             <p class="date-time">Post Day : ${data.content[i].postDate}</p>
                                         </div>
@@ -166,4 +166,21 @@ function deleteById(id) {
     })
 }
 
-showAll()
+
+function applyJobs() {
+    let user = localStorage.getItem("idUser")
+    var jobId = $('.part-full-time').data('job-id');
+    console.log(jobId)
+    $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/user/" + user + "/jobs/" + jobId + "/apply" ,
+        success: function (response) {
+            alert('Ứng tuyển thành công!');
+        },
+        error: function (xhr, status, error) {
+            alert('Đã xảy ra lỗi trong quá trình ứng tuyển.');
+        }
+    });
+}
+
+showAll();

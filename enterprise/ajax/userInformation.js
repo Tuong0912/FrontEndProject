@@ -4,7 +4,7 @@ function userInformation(id) {
         type: "GET",
         url: "http://localhost:8080/user/" + id,
         success(data) {
-            document.getElementById("userInformation").innerHTML = `<ul class="top_bar_contact_list">
+            document.getElementById("userDetail").innerHTML = `<ul class="top_bar_contact_list">
     <li>
         <i class="fa fa-phone coll" aria-hidden="true"></i>
         <div class="contact-no">${data.phone}</div>

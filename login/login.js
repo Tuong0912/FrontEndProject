@@ -61,7 +61,10 @@ function login() {
             userLogin = data.user1234567890;
             console.log(userLogin)
             localStorage.setItem("idUser", userLogin.id)
-            console.log(localStorage.getItem("idUser"))
+            localStorage.setItem("user_id", userLogin.email);
+            console.log("user_id" + localStorage.getItem("user_id"))
+            console.log("idUser" + localStorage.getItem("idUser"))
+
             if (userLogin === null) {
                 alert('Wrong account or password')
 
@@ -71,7 +74,7 @@ function login() {
             } else {
                 alert("Welcome " + userLogin.fullname)
                 if (userLogin.role.id === 3) {
-                    window.location.href = "http://localhost:63343/Big%20Project/user/html/list_user_job.html?_ijt=33t9vct44cqfnep5dj7mqniqo0&_ij_reload=RELOAD_ON_SAVE"
+                    window.location.href = "http://localhost:63342/Big%20Project/user/html/list_user_job.html?_ijt=augqfas95gl6govq2d2p26lc61&_ij_reload=RELOAD_ON_SAVE"
                 } else if (userLogin.role.id === 2) {
                     window.location.href = "http://localhost:63343/Big%20Project/enterprise/html/list_enterprise_job.html?_ijt=kf0le0mbanhnfqjs961akejobg&_ij_reload=RELOAD_ON_SAVE";
                 } else {

@@ -186,80 +186,30 @@
         <div class="carousel-background"><img src="../template_css/imags/slider/slider1.jpg" alt=""></div>
         <div class="carousel-container">
             <div class="carousel-content">
-                <h2 class="font-color-white">Find Jobs Now more Easy Way</h2>
-                <!--                <p class="font-color-white">Lorem ipsum tempus amet conubia adipiscing fermentum viverra gravida, mollis suspendisse pretium dictumst inceptos mattis euismod lorem nulla, magna duis nostra sodales luctus nulla praesent fermentum a elit mollis purus aenean curabitur eleifend </p>-->
-                <!--                <a href="#" data-toggle="modal" data-target="#myModal"><i class=" material-icons play">play_arrow</i></a>-->
+                <h2 class="font-color-white">User Information</h2>
             </div>
         </div>
     </div>
 </section>
-<div class="register-area" style="background-color: rgb(249, 249, 249);">
+
+<div class="content-area user-profiel" style="background-color: #FCFCFC;">&nbsp;
     <div class="container">
-        <form id="register-form">
-            <div class="col-md-6">
-                <div class="box-for overflow">
-                    <div class="col-md-12 col-xs-12 register-blocks">
-                        <h2>New account : </h2>
-                        <div class="form-group">
-                            <label for="fullname">What should I call you</label>
-                            <input type="text" class="form-control" id="fullname">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password">
-                        </div>
-                        <div class="form-group">
-                            <label for="rewritePassword">rewrite Password</label>
-                            <input type="password" class="form-control" id="rewritePassword">
-                        </div>
-                        <div>
-                            <label>Role</label>
-                            <select type="radio" class="form-control signuprole" style="height: 40px" id="role">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 profiel-container">
 
-                            </select>
-                            </div>
-                        </br>
-                        <div class="text-center">
-                            <button type="submit" onclick="register()" class="btn btn-default">Register</button>
-                        </div>
+                <form action="" method="">
+                    <div class="profiel-header">
+                        <h3>
+                            <b>User information</b>
+                        </h3>
+                        <hr>
                     </div>
-                </div>
-            </div>
-        </form>
-
-
-        <div class="col-md-6">
-            <div class="box-for overflow">
-                <div class="col-md-12 col-xs-12 login-blocks">
-                    <h2>Login : </h2>
-                    <div class="form-group">
-                        <label for="LoginName">Email</label>
-                        <input type="text" class="form-control" id="loginName">
-                    </div>
-                    <div class="form-group">
-                        <label for="LoginPassword">Password</label>
-                        <input type="password" class="form-control" id="loginPassword">
-                    </div>
-                    <div class="text-center">
-                        <button class="btn btn-default" onclick="login()"> Log in</button>
-                    </div>
+                    <div id="userDetail"></div>
                     <br>
-
-                    <h2>Social login : </h2>
-
-                    <p>
-                        <a class="login-social" href="#"><i class="fa fa-facebook"></i>&nbsp;Facebook</a>
-                        <a class="login-social" href="#"><i class="fa fa-google-plus"></i>&nbsp;Gmail</a>
-                        <a class="login-social" href="#"><i class="fa fa-twitter"></i>&nbsp;Twitter</a>
-                    </p>
-                </div>
+                </form>
 
             </div>
-        </div>
+        </div><!-- end row -->
 
     </div>
 </div>
@@ -296,4 +246,4 @@
 <script src="../template_css/assets/js/main.js"></script>
 </body>
 </html>
-<script src="../login/login.js"></script>
+<script src="/user/ajax/userDetail.js"></script>

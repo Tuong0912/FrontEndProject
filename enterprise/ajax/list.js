@@ -28,7 +28,6 @@ function showAll() {
                                         <div class="float-right margin-top text-align-center">
                                             <button onclick="updateById(${data.content[i].id})" class="part-full-time">Update</button></br>
                                             <button onclick="deleteById(${data.content[i].id})" class="part-full-time">Delete</button></br>
-                                            <button class="part-full-time">Apply Now</button></br>
                                             <button onclick="saveId(${data.content[i].id})" class="part-full-time">View</button><br>
                                             <p class="date-time">Post Day : ${data.content[i].postDate}</p>
                                         </div>

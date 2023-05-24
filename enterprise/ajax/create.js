@@ -84,8 +84,9 @@ function createForm() {
     document.getElementById("createForm").innerHTML = context;
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/enterprise",
+        url: "http://localhost:8080/enterprise/findAll",
         success(data) {
+            console.log(data)
             let firstTest = ``
             for (let i = 0; i < data.length; i++) {
                 firstTest += `<option value="${data[i].id}">${data[i].name}</option>`
@@ -123,7 +124,6 @@ function createForm() {
         type: "GET",
         url: "http://localhost:8080/qualification",
         success(data) {
-            console.log(data)
             let newText = ``
             for (let i = 0; i < data.length; i++) {
                 newText += `<option value="${data[i].id}">${data[i].name}</option>`
@@ -167,7 +167,7 @@ function save() {
         src: src,
         shortDescription: shortDescription,
         longDescription: longDescription,
-        programLanguag: {
+        programLanguage: {
             "id": programLanguage
         },
         qualification: {
