@@ -86,7 +86,7 @@ function login() {
             } else {
                 alert("Welcome " + userLogin.fullname)
                 if (userLogin.role.id === 3) {
-                    window.location.href = "http://localhost:63342/Big%20Project/user/html/list_user_job.html?_ijt=augqfas95gl6govq2d2p26lc61&_ij_reload=RELOAD_ON_SAVE"
+                    window.location.href = "http://localhost:63343/Big%20Project/user/html/list_user_job.html?_ijt=g895c50pq40ep66davi44dppph&_ij_reload=RELOAD_ON_SAVE"
                 } else if (userLogin.role.id === 2) {
                     window.location.href = "http://localhost:63342/Big%20Project/enterprise/html/list_enterprise_job.html?_ijt=goq8ljlcnkt761a1j3k6l270s5&_ij_reload=RELOAD_ON_SAVE";
                 } else {
