@@ -52,9 +52,7 @@ function userDetail() {
             document.getElementById("userDetail").innerHTML = context;
 
         }
-    });
-    event.preventDefault()
-
+    })
 }
 
 function updateUser(id) {

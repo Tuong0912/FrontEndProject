@@ -90,7 +90,7 @@ function login() {
                 } else if (userLogin.role.id === 2) {
                     window.location.href = "http://localhost:63342/Big%20Project/enterprise/html/list_enterprise_job.html?_ijt=goq8ljlcnkt761a1j3k6l270s5&_ij_reload=RELOAD_ON_SAVE";
                 } else {
-                    window.location.href = "http://localhost:63342/Big%20Project/admin/html/list_job_approved.html?_ijt=goq8ljlcnkt761a1j3k6l270s5&_ij_reload=RELOAD_ON_SAVE"
+                    window.location.href = "http://localhost:63343/Big%20Project/admin/html/list_job_approved.html?_ijt=2gcsrl6b723fpgpd5kblian4cf&_ij_reload=RELOAD_ON_SAVE"
                 }
             }
 
@@ -99,8 +99,8 @@ function login() {
 }
 
 function logout() {
-    localStorage.setItem("idUser", "")
-    window.location.href = "login.html";
+    // localStorage.setItem("idUser", "")
+    window.location.href = "http://localhost:63343/Big%20Project/login/login.html?_ijt=nt9h7aekqmjg3dm2rs1a9agadl&_ij_reload=RELOAD_ON_SAVE";
 }
 
 function role() {
