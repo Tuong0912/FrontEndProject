@@ -19,3 +19,14 @@ function downloadHTML() {
         }
     });
 }
+
+
+function downloadBeforeUse() {
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:8080/job/download",
+        success() {
+            alert("done !! ")
+        }
+    })
+}
